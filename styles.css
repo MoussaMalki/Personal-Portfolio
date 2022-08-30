@@ -1,0 +1,445 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&family=Silkscreen&display=swap');
+
+* {
+    font-family: 'Silkscreen', cursive;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-padding-top: 2rem; /* this property is for:  */
+    scroll-behavior: smooth;
+    list-style: none; /* removes the dots from the UL elements*/
+    text-decoration: none;
+   
+   
+}
+
+:root { /* these are global variables decleared inside of the :root selector */
+    --main-color: #00B0FF;
+    --second-color: #f2be19;
+    --text-color: #453456;
+   
+ } 
+
+/* Custom scroll bar */
+
+html::-webkit-scrollbar {
+    width: 0.5rem;
+}
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+html::-webkit-scrollbar-thumb {
+   background: var(--second-color);
+   border-radius: 5rem;
+}
+
+
+/* header */
+
+header {
+ 
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 2; /*  The z-index property specifies the stack order of an element. */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #453456;
+    padding: 5px 5vw;
+    max-height: 10vh;
+    position: sticky;
+    z-index: 999;
+}
+
+
+
+.nav-bar {
+display: flex;
+max-height: 50px;
+
+
+}
+.nav-bar li{
+position: relative;  /* so the nav bar hover affect can work */
+
+}
+.nav-bar a{
+  font-size: 1.1rem;
+  padding: 10px;
+  color: #FFF;
+  font-weight: 700;
+}
+ /* for the bottom inline  effect */
+.nav-bar a::after {
+content: "";
+width: 0;
+height: 3px;
+background: var(--second-color);
+position: absolute;
+bottom: -4px;
+left: 0;
+transition: 0.5s;
+}
+.nav-bar a:hover::after{
+    width: 100%;
+}
+
+.logo {
+font-size: 2.5rem;
+font-family: 'Silkscreen', cursive;
+color: var(--text-color);
+position: relative;
+
+}
+.logo img{
+    width: 5rem;
+}
+.logo:hover {
+    color: var(--second-color);
+    transition: 0.7s ease;
+    position: relative;
+}
+#Home {
+    min-height: 80vh;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20vh 5vw;
+    position: relative;
+}
+#Home img {
+    width: 100%;
+    max-width: 35rem;
+}
+.Map{
+    position: absolute;
+    bottom: 10px;
+    width: 60%;
+    border: none;
+    border-bottom: 3px solid var(--text-color);
+    border-radius: 15px;
+}
+hr {
+    bottom: 10px;
+    width: 60%;
+    border: none;
+    border-bottom: 3px solid var(--text-color);
+    border-radius: 15px; 
+    margin: auto;
+}
+#character {
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    
+}
+#character img{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 2px;
+    
+}
+.home-text h1 {
+    color: #453456;
+    font-size: clamp(2rem, 6vw, 3rem);
+    font-family: 'Silkscreen', cursive;
+    margin-bottom: 8vh;
+}
+.home-text a {
+   color: var(--text-color);
+    font-weight: 600;
+    background-color: var(--second-color);
+    padding: 10px 50px;
+    border-radius: 5px;
+    font-family: 'Silkscreen', cursive;
+    
+}
+.home-text a:hover {
+    background-color: #DBA50A;
+    transition: 0.7s ease;
+}
+.home-text {
+   text-align: center;
+ 
+}
+.home-pic img {
+    width: 100%;
+    max-width: 35rem;
+    animation: upNdown 6s ease-in-out infinite;
+}
+.social-icons {
+    margin-top: 8vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.social-icons img {
+    width: 40px !important;
+    margin: 0 5px;
+    cursor: pointer;
+}
+.social-icons i {
+    font-size: 2rem;
+    margin: 0 5px;
+    cursor: pointer;
+    color: var(--text-color);
+
+}
+.social-icons img:hover {
+  position: relative;
+  top: -3px;
+ transition: 0.7s ease;
+}
+.cloud1 {
+    position: absolute;
+    width: 200px !important;
+    top: 2vh;
+    left: 10vw;
+    animation: float 6s ease-in-out infinite;
+}
+.cloud4 {
+    position: absolute;
+    width: 200px !important;
+    top: 2vh;
+    left: 10vw;
+    animation: float 6s ease-in-out infinite;
+}
+.cloud3 {
+    position: absolute;
+    width: 300px !important;
+    top: 1vh;
+    right: 10vw;
+    animation: float 6s ease-in-out infinite;
+}
+.cloud2 {
+    position: absolute;
+    width: 200px !important;
+    top: 3vh;
+    right: 10vw;
+    animation: float 6s ease-in-out infinite;
+}
+@keyframes float {
+    0% {
+	
+		transform: translatex(0px);
+   
+	}
+	50% {
+		
+		transform: translatex(-20px);
+	}
+	100% {
+		
+		transform: translatex(0px);
+	}
+}
+
+@keyframes upNdown {
+    0% {
+	
+		transform: translatey(0px);
+   
+	}
+	50% {
+		
+		transform: translatey(-20px);
+	}
+	100% {
+		
+		transform: translatey(0px);
+	}
+}
+
+#menu-icon {
+    font-size: 3rem;
+    cursor: pointer;
+    z-index: 10001; /*An element with greater stack order is always in front of an element with a lower stack order.*/
+    display: none;
+    color: #FFF;
+    position: absolute;
+    top: 1vh;
+    right: 2vw;
+}
+/* 
+=============> About Me Section */
+
+#About{
+    min-height: 80vh;
+    position: relative;
+}
+.about-sections {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15vh 8vw;
+    
+}
+
+.about-img img{
+    width: 100%;
+    max-width: 25rem;
+
+    position: relative;
+    animation: upNdown 6s ease-in-out infinite;
+    
+}
+
+.about-text {
+    width: 100%;
+    max-width: 25rem;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+
+}
+.text {
+    text-align: center;
+}
+.text p {
+    font-size: clamp(1.1rem, 1.2vw, 1.8rem);
+    align-items: center;
+    margin-top: 5vh;
+}
+.text span {
+    color: var(--second-color);
+    font-weight: 600;
+}
+.secTitle {
+    font-size: clamp(2rem, 6vw, 2.5rem);
+    color: var(--text-color);
+    position: relative;
+    top: 5vh;
+    text-align: center;
+}
+/* 
+////// =====> Projects part */
+
+#Services{
+    min-height: 80vh;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ position: relative;
+}
+.project-container {
+    width: 100%;
+    max-width: 50rem;
+    margin-top: 15vh;
+    position: relative;
+    animation: upNdown 6s ease-in-out infinite;
+}
+.project-container img{
+    width: 100%;
+    max-width: 50rem;
+}
+.pcContainer{
+   position: absolute;
+   top: 7.4%;
+   left: 4.5%;
+   height: 52%;
+   width: 55%;
+}
+.phoneContainer {
+    position: absolute;
+    top: 21.3%;
+    right: 8.2%;
+    height: 62%;
+    width: 17.3%;
+}
+.pcContainer img{
+    width: 100%;
+    height: 100%;
+}
+.visitSiteBtn {
+    position: absolute;
+    top: 81%;
+    left: 27%;
+   color:var(--second-color);
+   text-decoration: underline;
+   font-size: clamp(0.6rem, 1.2vw, 2rem);
+   text-decoration-color: var(--text-color);
+   font-weight: 600;
+}
+.phoneContainer img{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+
+/* footer section */
+
+footer {
+    min-height: 15vh;
+    background-color: var(--text-color);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+   justify-content: space-evenly;
+    padding: 1vw 0;
+    text-align: center;
+    color: #fff;
+}
+footer a {
+  color: var(--second-color);
+}
+footer i {
+    font-size: 1.8rem;
+}
+.sideNav {
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 100%; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1002; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 20vh;
+    display: none;
+    flex-direction: column;
+   background-color: var(--text-color);
+   text-align: center;
+  }
+  .sideNav a {
+    color: #fff;
+    font-size: 1.7rem;
+    margin-bottom: 2vh;
+  }
+  .sideNav a:hover {
+    color: var(--second-color);
+    transition: 0.7s ease;
+  }
+  #clBtn {
+    font-size: 3rem;
+    position: absolute;
+    top: 1vh;
+    right: 2vw;
+    color: #fff;
+  }
+@media  (max-width: 650px) {
+    .cloud1, .cloud2, .cloud4{
+        display: none;
+    }
+    .cloud3 {
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .nav-bar li{
+        display: none;  /* so the nav bar hover affect can work */
+        
+        }
+        #menu-icon {
+            display: initial;
+        }
+        #bot {
+            display: none;
+        }
+} 
