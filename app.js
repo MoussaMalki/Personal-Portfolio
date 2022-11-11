@@ -14,7 +14,7 @@ icons.forEach((e) => {
       audio.play();
       setTimeout(() => {
         e.setAttribute(`id`, `linkIcon`);
-      }, 100);
+      }, 10);
     }
     if (e.getAttribute(`id`) === `linkIcon`) {
       window.location.href = "https://www.facebook.com/moussa.em.18";
@@ -25,7 +25,7 @@ icons.forEach((e) => {
       audio.play();
       setTimeout(() => {
         e.setAttribute(`id`, `instaIcon`);
-      }, 100);
+      }, 10);
     }
     if (e.getAttribute(`id`) === `instaIcon`) {
       window.location.href = "https://www.instagram.com/moussa_malki21/?hl=en";
@@ -35,7 +35,7 @@ icons.forEach((e) => {
       audio.play();
       setTimeout(() => {
         e.setAttribute(`id`, `twitterIcon`);
-      }, 100);
+      }, 10);
     }
     if (e.getAttribute(`id`) === `twitterIcon`) {
       window.location.href = "https://twitter.com/MalkiRave";
@@ -81,7 +81,7 @@ doc.querySelector(`#Home`).onclick = () => {
           if (acc === 0) {
             clearInterval(goDown);
           }
-        }, 30);
+        }, 10);
       }
     }, 2);
     setTimeout(() => {
@@ -113,7 +113,6 @@ const sr = ScrollReveal({
   mobile: true,
 });
 
-sr.reveal(`#bot`, { delay: 700, origin: `top`, distance: `18rem` });
 sr.reveal(`.cloud1, .cloud3, .cloud2, .cloud4`, { delay: 400, origin: `top` });
 sr.reveal(`.home-pic`, { delay: 500, origin: `right` });
 sr.reveal(`.home-text`, { delay: 400, origin: `left` });
@@ -135,10 +134,7 @@ setInterval(() => {
   if (turn === 0) {
     pcContainer.setAttribute(`src`, `images/carSite1.png`);
     phoneContainer.setAttribute(`src`, `images/carSite2.png`);
-    changeBtn.setAttribute(
-      `href`,
-      `https://bejewelled-sunburst-2ec3ea.netlify.app`
-    );
+    changeBtn.setAttribute(`href`, `https://dusseldolf.com`);
     setTimeout(() => {
       turn = 1;
     }, 100);
@@ -154,10 +150,16 @@ setInterval(() => {
   if (turn === 2) {
     pcContainer.setAttribute(`src`, `images/langSite1.png`);
     phoneContainer.setAttribute(`src`, `images/langSite2.png`);
-    changeBtn.setAttribute(
-      `href`,
-      `https://candid-profiterole-6d3fa5.netlify.app/`
-    );
+    changeBtn.setAttribute(`href`, `https://moussatutoring.netlify.app/`);
+    setTimeout(() => {
+      turn = 3;
+    }, 100);
+  }
+
+  if (turn === 3) {
+    pcContainer.setAttribute(`src`, `images/gym1.png`);
+    phoneContainer.setAttribute(`src`, `images/gym2.png`);
+    changeBtn.setAttribute(`href`, `https://fitness-gymwebsite.netlify.app`);
     setTimeout(() => {
       turn = 0;
     }, 100);
